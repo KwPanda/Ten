@@ -1,0 +1,12 @@
+public IEnumerable<int> GetFirstDecile()
+{
+    int index = 0;
+    while (index < 10)
+        yield return index++;
+
+    yield return 50;
+
+    var items = new int[] {100, 101, 102, 103, 104, 105, 106, 107, 108, 109 };
+    foreach (var item in items)
+        yield return item;
+}
