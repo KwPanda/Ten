@@ -10,3 +10,22 @@ public IEnumerable<int> GetFirstDecile()
     foreach (var item in items)
         yield return item;
 }
+
+public IEnumerable<int> GetSingleDigitOddNumbers(bool getCollection)
+{
+    if (getCollection == false)
+        return new int[0];
+    else
+        return IteratorMethod();
+}
+
+private IEnumerable<int> IteratorMethod()
+{
+    int index = 0;
+    while (index < 10)
+    {
+        if (index % 2 == 1)
+            yield return index;
+        index++;
+    }
+}
